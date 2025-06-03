@@ -240,7 +240,7 @@ This repository includes: ❤️ Complete JavaScript Learning Material 🙏
 
 
 
-## 📚 [_JavaScript Exercises & Solutions_](./Exercises-And-Solutions)
+## 📚 [JavaScript Exercises & Solutions](./Exercises-And-Solutions)
 
 ### Exercises
 
@@ -302,7 +302,7 @@ This repository includes: ❤️ Complete JavaScript Learning Material 🙏
 
 </details>
 
-## 📚 [_Interview Questions & Answers](./Interview QA)
+## 📚 [Interview Questions & Answers](./Interview QA)
 
 <details>
 <summary>Click for details</summary>
