@@ -1,4 +1,4 @@
-# HTML Notes
+## HTML Notes
 
 ## 1. What is HTML?
 
