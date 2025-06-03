@@ -29,12 +29,12 @@ This repository includes: ❤️ Complete JavaScript Learning Material 🙏
 
 
 
-## 📚 [_JavaScript Notes (en)_](./notes/English)
+## 📚 [JavaScript Notes](./Notes/notes)
 
 <details>
 <summary>Click for details</summary>
 
-- [_Chapter 01- Introduction & History_](./notes/English/01-introduction-and-history.md)
+- [_Chapter 01- Introduction & History_](./Notes/notes/01-introduction-and-history.md)
 
   - [_Programming Language_](./notes/English/01-introduction-and-history.md#what-is-a-programming-language-)
   - [_High Level Programming Language_](./notes/English/01-introduction-and-history.md#what-is-high-level-programming-language)
