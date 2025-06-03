@@ -27,7 +27,7 @@ This repository includes: ❤️ Complete JavaScript Learning Material 🙏
 </div>
 
 
-## 📚 [_JavaScript Syllabus_](./Syllabus/Syllabus.md/)
+
 
 ## 📚 [_JavaScript Notes (en)_](./notes/English)
 
