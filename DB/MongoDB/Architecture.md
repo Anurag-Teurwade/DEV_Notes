@@ -4,12 +4,12 @@
 
 ```mermaid
 graph TD
-    A[Client] --> B[Mongos<br>(Query Router)]
-    B --> C[Config Servers<br>(Metadata)]
-    B --> D[Shard 1<br>(Data)]
-    B --> E[Shard 2<br>(Data)]
-    D --> F[Replica Set]
-    E --> G[Replica Set]
+    A[Client] --> B["Mongos\n(Query Router)"]
+    B --> C["Config Servers\n(Metadata)"]
+    B --> D["Shard 1\n(Data)"]
+    B --> E["Shard 2\n(Data)"]
+    D --> F["Replica Set"]
+    E --> G["Replica Set"]
 ```
 
 ## 🔹 Core Components
