@@ -1,7 +1,7 @@
 # 🐬 Complete MySQL Queries and Meanings
 
 
-## 🟣 3. Database Basics
+## 🟣 1. Database Basics
 
 ```sql
 CREATE DATABASE college;
@@ -24,7 +24,7 @@ DESCRIBE students;
 
 ---
 
-## 🟠 4. CRUD Operations
+## 🟠 2. CRUD Operations
 
 ```sql
 -- INSERT
@@ -47,7 +47,7 @@ DELETE FROM students WHERE name = 'John Doe';
 
 ---
 
-## 🟡 5. Constraints
+## 🟡 3. Constraints
 
 ```sql
 CREATE TABLE users (
@@ -60,7 +60,7 @@ CREATE TABLE users (
 
 ---
 
-## 🟢 6. SQL Clauses
+## 🟢 4. SQL Clauses
 
 ```sql
 SELECT * FROM students WHERE age > 18;
@@ -93,7 +93,7 @@ SELECT * FROM students WHERE name LIKE 'J%';
 
 ---
 
-## 🔵 7. Joins
+## 🔵 5. Joins
 
 ```sql
 -- INNER JOIN
@@ -130,7 +130,7 @@ SELECT A.name, B.name FROM students A CROSS JOIN departments B;
 
 ---
 
-## 🟣 8. Functions
+## 🟣 6. Functions
 
 ```sql
 -- String Functions
@@ -156,7 +156,7 @@ SELECT MAX(age), MIN(age) FROM students;
 
 ---
 
-## 🟠 9. Subqueries
+## 🟠 7. Subqueries
 
 ```sql
 -- Single Row
@@ -171,7 +171,7 @@ SELECT name FROM students s WHERE age > (SELECT AVG(age) FROM students WHERE dep
 
 ---
 
-## 🟡 10. Views
+## 🟡 8. Views
 
 ```sql
 CREATE VIEW young_students AS SELECT * FROM students WHERE age < 21;
@@ -186,7 +186,7 @@ DROP VIEW young_students;
 
 ---
 
-## 🟢 11. Indexes
+## 🟢 9. Indexes
 
 ```sql
 CREATE INDEX idx_name ON students(name);
@@ -201,7 +201,7 @@ DROP INDEX idx_name ON students;
 
 ---
 
-## 🔵 12. Stored Procedures & Functions
+## 🔵 10. Stored Procedures & Functions
 
 ```sql
 DELIMITER //
@@ -217,7 +217,7 @@ CALL GetAllStudents();
 
 ---
 
-## 🟣 13. Triggers
+## 🟣 11. Triggers
 
 ```sql
 CREATE TRIGGER before_insert_student
@@ -229,7 +229,7 @@ SET NEW.admission_date = CURDATE();
 
 ---
 
-## 🟠 14. Transactions & ACID
+## 🟠 12. Transactions & ACID
 
 ```sql
 START TRANSACTION;
@@ -246,7 +246,7 @@ SAVEPOINT sp1;
 
 ---
 
-## 🟡 15. User Management & Security
+## 🟡 13. User Management & Security
 
 ```sql
 CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
@@ -257,7 +257,7 @@ FLUSH PRIVILEGES;
 
 ---
 
-## 🟢 16. Backup and Restore
+## 🟢 14. Backup and Restore
 
 ```bash
 mysqldump -u root -p college > backup.sql
@@ -269,7 +269,7 @@ mysql -u root -p college < backup.sql
 
 ---
 
-## 🔵 17. Performance Tuning & Optimization
+## 🔵 15. Performance Tuning & Optimization
 
 ```sql
 EXPLAIN SELECT * FROM students WHERE age > 18;
@@ -278,17 +278,17 @@ EXPLAIN SELECT * FROM students WHERE age > 18;
 
 ---
 
-## 🟣 18. MySQL with Programming Languages
+## 🟣 16. MySQL with Programming Languages
 (No SQL queries — connection scripts depend on language)
 
 ---
 
-## 🟠 19. MySQL Workbench
+## 🟠 17. MySQL Workbench
 (Visual Tools — no SQL queries required)
 
 ---
 
-## 🟡 20. Advanced Concepts
+## 🟡 28. Advanced Concepts
 
 ```sql
 -- Partitioning (Example)
