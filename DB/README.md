@@ -10,16 +10,16 @@ I’ve created this repository to assist students, freshers, and working profess
 
 ## 📚 What’s Inside?
 
-- 📓 [_**Notes**_](./Notes.md)  
+- 📓 [_**Notes**_](./Notes)  
   _Clear explanations of MySQL concepts, commands, and best practices._
 
-- 💻[_**Queries**_](./Queries.md)  
+- 💻[_**Queries**_](./Queries)  
   _Practical MySQL queries with examples for daily use and learning._
 
-- ❓[**Interview Questions & Answers**](./Interview-QA.md)  
+- ❓[**Interview Questions & Answers**](./Interview-QA)  
   _50+ frequently asked MySQL interview questions with simple, clear answers — perfect for freshers._
 
-- 📊 [**ER Diagrams**](./ER-Diagrams.md)  
+- 📊 [**ER Diagrams**](./ER-Diagrams)  
   _Sample database ER diagrams with simple visuals and explanations to understand database design._
 
 ---
