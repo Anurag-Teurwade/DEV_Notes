@@ -10,7 +10,7 @@ This repo is tailored for **students**, **freshers**, and **working professional
 
 ## 📁 Repository Structure (Click to Explore)
 
-### 🐬 [MySQL](./MySQL)
+### 🐬 [MySQL](./MYSQL)
 
 - 📓 [Notes.md](./MySQL/Notes.md) – MySQL concepts and syntax explained clearly  
 - 💻 [Queries.md](./MySQL/Queries.md) – Practical MySQL queries with examples  
