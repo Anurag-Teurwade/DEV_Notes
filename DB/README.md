@@ -12,10 +12,10 @@ This repo is tailored for **students**, **freshers**, and **working professional
 
 ### 🐬 [MySQL](./MYSQL)
 
-- 📓 [Notes.md](./MySQL/Notes.md) – MySQL concepts and syntax explained clearly  
-- 💻 [Queries.md](./MySQL/Queries.md) – Practical MySQL queries with examples  
-- ❓ [Interview-QA.md](./MySQL/Interview-QA.md) – Frequently asked MySQL interview questions  
-- 📊 [ER-Diagrams.md](./MySQL/ER-Diagrams.md) – Entity-Relationship diagrams for database design
+- 📓 [Notes.md](./MYSQL/Notes.md) – MySQL concepts and syntax explained clearly  
+- 💻 [Queries.md](./MYSQL/Queries.md) – Practical MySQL queries with examples  
+- ❓ [Interview-QA.md](./MYSQL/Interview-QA.md) – Frequently asked MySQL interview questions  
+- 📊 [ER-Diagrams.md](./MYSQL/ER-Diagrams.md) – Entity-Relationship diagrams for database design
 
 ---
 
