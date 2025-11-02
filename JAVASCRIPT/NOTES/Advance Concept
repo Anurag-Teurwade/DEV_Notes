@@ -1,0 +1,229 @@
+## JavaScript Advanced Concepts
+
+## Event Delegation
+
+### 📘 Definition
+Event Delegation is a technique where you attach a single event listener to a parent element instead of multiple child elements.
+
+### 💡 How It Works
+Events in JavaScript **bubble up** the DOM — from the target element to its ancestors.  
+So, you can listen for an event on the parent and handle it based on the event target.
+
+### 🧠 Example
+```html
+<ul id="list">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<script>
+document.querySelector("#list").addEventListener("click", (e) => {
+  if (e.target.tagName === "LI") {
+    console.log("Clicked item:", e.target.textContent);
+  }
+});
+</script>
+````
+
+### ✅ Benefits
+
+* Improves performance
+* Reduces memory usage
+* Handles dynamically added elements easily
+
+---
+
+## Debouncing & Throttling
+
+### 🧩 Debouncing
+
+Debouncing ensures that a function runs **only after a delay** since the last call.
+
+#### Example
+
+```js
+function debounce(func, delay) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => func.apply(this, args), delay);
+  };
+}
+
+const handleInput = debounce(() => console.log("Input typed"), 500);
+window.addEventListener("keyup", handleInput);
+```
+
+### ⚙️ Throttling
+
+Throttling ensures a function runs **at most once every X milliseconds**.
+
+#### Example
+
+```js
+function throttle(func, limit) {
+  let inThrottle;
+  return function (...args) {
+    if (!inThrottle) {
+      func.apply(this, args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+}
+
+window.addEventListener("scroll", throttle(() => console.log("Scroll event"), 1000));
+```
+
+### ✅ Use Cases
+
+* Search input boxes (Debounce)
+* Scroll or resize events (Throttle)
+
+---
+
+## Closures & Currying
+
+### 🔹 Closure
+
+A closure gives access to an outer function's scope from an inner function, even after the outer function has executed.
+
+#### Example
+
+```js
+function outer() {
+  let count = 0;
+  return function inner() {
+    count++;
+    console.log(count);
+  };
+}
+
+const counter = outer();
+counter(); // 1
+counter(); // 2
+```
+
+### 🧠 Why Use Closures?
+
+* Data privacy
+* Stateful functions
+* Used in modules, event handlers
+
+### 🔸 Currying
+
+Currying transforms a function with multiple arguments into a sequence of functions taking one argument at a time.
+
+#### Example
+
+```js
+function add(a) {
+  return function (b) {
+    return function (c) {
+      return a + b + c;
+    };
+  };
+}
+
+console.log(add(1)(2)(3)); // 6
+```
+
+### ✅ Benefits
+
+* Code reusability
+* Functional programming style
+* Easy partial application
+
+---
+
+## Iterators & Generators
+
+### 🔹 Iterator
+
+An iterator is an object that allows sequential access to elements of a collection.
+
+#### Example
+
+```js
+const arr = [10, 20, 30];
+const iterator = arr[Symbol.iterator]();
+
+console.log(iterator.next()); // { value: 10, done: false }
+console.log(iterator.next()); // { value: 20, done: false }
+console.log(iterator.next()); // { value: 30, done: false }
+console.log(iterator.next()); // { value: undefined, done: true }
+```
+
+### 🔸 Generator
+
+A generator is a function that can be paused and resumed using `yield` and `next()`.
+
+#### Example
+
+```js
+function* numberGenerator() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+const gen = numberGenerator();
+console.log(gen.next().value); // 1
+console.log(gen.next().value); // 2
+console.log(gen.next().value); // 3
+```
+
+### ✅ Benefits
+
+* Efficient data streaming
+* Lazy evaluation
+* Async flow management
+
+---
+
+## Proxy & Reflect
+
+### 🔹 Proxy
+
+A Proxy lets you intercept and redefine fundamental operations (like reading, writing, or deleting properties).
+
+#### Example
+
+```js
+const user = { name: "Anurag" };
+
+const proxy = new Proxy(user, {
+  get(target, prop) {
+    console.log(`Getting ${prop}`);
+    return target[prop];
+  },
+  set(target, prop, value) {
+    console.log(`Setting ${prop} = ${value}`);
+    target[prop] = value;
+  },
+});
+
+proxy.name; // Getting name
+proxy.age = 22; // Setting age = 22
+```
+
+### 🔸 Reflect
+
+`Reflect` provides methods for object manipulation (mirrors object behavior).
+
+#### Example
+
+```js
+const person = { name: "Anurag" };
+Reflect.set(person, "age", 22);
+console.log(Reflect.get(person, "age")); // 22
+```
+
+### ✅ Use Cases
+
+* Validation
+* Logging
+* Access control
+* Framework internals (like Vue, MobX)
+
